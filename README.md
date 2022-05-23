@@ -1,2 +1,3 @@
-# workshop-13
-Monday U workshop 13 - redux
+# workshop-13 - Redux
+
+## Experience with redux state and actions
