@@ -36,3 +36,5 @@
 
 2. Add actions for login/logout buttons
 3. Disable counter buttons when user is not logged in
+
+![image](https://user-images.githubusercontent.com/35146205/169763492-4edacd86-365c-4bbb-937b-f67603db8518.png)
