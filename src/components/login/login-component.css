@@ -1,0 +1,14 @@
+.login-component label {
+  margin-right: 8px;
+}
+
+.login-component input {
+  margin-bottom: 8px;
+}
+
+.login-component .pass-input {
+  margin-right: 10px;
+}
+.login-component button {
+  margin: 8px;
+}
