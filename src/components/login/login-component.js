@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import "./login-component.css";
 
-function CounterComponent({ loggedInUserName, badPassword, logInAction, logOutAction }) {
+function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction, logOutAction }) {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
 
@@ -18,9 +18,7 @@ function CounterComponent({ loggedInUserName, badPassword, logInAction, logOutAc
     [setPass]
   );
   const login = useCallback(() => {
-    if (user) {
-      logInAction(user, pass);
-    }
+    logInAction(user, pass);
   }, [logInAction, user, pass]);
   const logout = useCallback(() => {
     logOutAction();
@@ -43,6 +41,7 @@ function CounterComponent({ loggedInUserName, badPassword, logInAction, logOutAc
       {!loggedInUserName && <button onClick={login}>Login</button>}
       {loggedInUserName && <button onClick={logout}>Logout</button>}
       {badPassword && <div className="bad-pass">Bad password</div>}
+      {badUser && <div className="bad-pass">Missing user</div>}
     </div>
   );
 }

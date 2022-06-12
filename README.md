@@ -32,8 +32,9 @@
 
 ### Add login
 
-1. Allow any user to login, but force password to be 123. If user is using other password, show an appropriate message
-
+1. Allow any user to login, but force password to be 1234.
+   If user is empty, show an appropriate message
+   If user is using other password, show an appropriate message
 2. Add actions for login/logout buttons
 3. Disable counter buttons when user is not logged in
 

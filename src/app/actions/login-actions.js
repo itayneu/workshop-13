@@ -6,6 +6,10 @@ const logIn = user => ({
   user
 });
 
+const badUser = () => ({
+  type: actionsTypes.BAD_USER
+});
+
 const logOut = () => ({
   type: actionsTypes.LOG_OUT
 });
@@ -16,7 +20,9 @@ const badPassword = () => ({
 
 export const logInAction = (user, password) => {
   return dispatch => {
-    if (ALLOWED_PASSWORD !== password) {
+    if (!user) {
+      dispatch(badUser());
+    } else if (ALLOWED_PASSWORD !== password) {
       dispatch(badPassword());
     } else {
       dispatch(logIn(user));
