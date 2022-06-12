@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return bindActionCreators({ logInAction, logOutAction }, dispatch);
+  // TODO bind logOutAction
+  return bindActionCreators({ logInAction }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginComponent);

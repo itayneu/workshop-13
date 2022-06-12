@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getCounterValue } from "../../app/selectors/counter-selectors";
 import { getIsLoggedIn } from "../../app/selectors/auth-selectors";
-import { incrementAction, decrementAction, resetAction } from "../../app/actions/counter-actions";
+import { incrementAction } from "../../app/actions/counter-actions";
 import CounterComponent from "./counter-component";
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return bindActionCreators({ incrementAction, decrementAction, resetAction }, dispatch);
+  // TODO bind decrementAction and resetAction action creators
+  return bindActionCreators({ incrementAction }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CounterComponent);
