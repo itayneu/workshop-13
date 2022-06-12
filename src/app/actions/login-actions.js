@@ -6,8 +6,10 @@ const logIn = user => ({
   user
 });
 
-const logOut = () => ({
-  type: actionsTypes.LOG_OUT
+// TODO create logout action
+
+const badUser = () => ({
+  type: actionsTypes.BAD_USER
 });
 
 const badPassword = () => ({
@@ -16,7 +18,9 @@ const badPassword = () => ({
 
 export const logInAction = (user, password) => {
   return dispatch => {
-    if (ALLOWED_PASSWORD !== password) {
+    if (!user) {
+      dispatch(badUser());
+    } else if (ALLOWED_PASSWORD !== password) {
       dispatch(badPassword());
     } else {
       dispatch(logIn(user));
@@ -24,8 +28,4 @@ export const logInAction = (user, password) => {
   };
 };
 
-export const logOutAction = () => {
-  return dispatch => {
-    dispatch(logOut());
-  };
-};
+// TODO create logout action creator
