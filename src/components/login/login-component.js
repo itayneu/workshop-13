@@ -21,8 +21,8 @@ function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction,
     logInAction(user, pass);
   }, [logInAction, user, pass]);
   const logout = useCallback(() => {
-    // TODO call logOutAction
-  }, []);
+    logOutAction();
+  }, [logOutAction]);
 
   return (
     <div className="login-component">
