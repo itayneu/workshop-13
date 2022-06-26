@@ -11,12 +11,12 @@ function CounterComponent({ counterValue, isLoggedIn, incrementAction }) {
     // TODO call resetAction
   }, []);
 
-  // TODO enable buttons only if logged in
-  const disabled = false;
+  const disabled = !isLoggedIn;
   return (
     <div className="App">
       <h3>Value: {counterValue}</h3>
       {!isLoggedIn && <div>Please login first</div>}
+      <br />
       <button onClick={increment} disabled={disabled}>
         Increase
       </button>

@@ -24,18 +24,17 @@
 
 ![image](https://user-images.githubusercontent.com/35146205/169762361-da5d17ab-8c02-46a8-bdb9-990f61439cfa.png)
 
-### Add missing actions to counter buttons
-
-1. Increase - adds 1 to the counter (value saved in store)
-2. Decrease - subtract 1 from counter
-3. Reset - sets the initial value (0)
-
 ### Add login
 
 1. Allow any user to login, but force password to be 1234.
    If user is empty, show an appropriate message
    If user is using other password, show an appropriate message
 2. Add actions for login/logout buttons
-3. Disable counter buttons when user is not logged in
+
+### Add missing actions to counter buttons
+
+1. Increase - adds 1 to the counter (value saved in store)
+2. Decrease - subtract 1 from counter
+3. Reset - sets the initial value (0)
 
 ![image](https://user-images.githubusercontent.com/35146205/169763492-4edacd86-365c-4bbb-937b-f67603db8518.png)

@@ -1,5 +1,5 @@
 import actionsTypes from "./constants";
-const ALLOWED_PASSWORD = "123";
+const ALLOWED_PASSWORD = "1234";
 
 const logIn = user => ({
   type: actionsTypes.LOG_IN,
@@ -18,13 +18,9 @@ const badPassword = () => ({
 
 export const logInAction = (user, password) => {
   return dispatch => {
-    if (!user) {
-      dispatch(badUser());
-    } else if (ALLOWED_PASSWORD !== password) {
-      dispatch(badPassword());
-    } else {
-      dispatch(logIn(user));
-    }
+    // TODO dispatch badUser() action if user is missing
+    // TODO dispatch badPassword() action if ALLOWED_PASSWORD !== password
+    // TODO dispatch logIn(user)
   };
 };
 
