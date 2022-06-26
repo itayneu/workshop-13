@@ -36,7 +36,7 @@ function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction,
       <label for="psw" className="pass-input">
         <b>Password</b>
       </label>
-      <input type="password" placeholder="Use 123" name="psw" onChange={onPassChange} />
+      <input type="password" placeholder="Use 1234" name="psw" onChange={onPassChange} />
       <br />
       {!loggedInUserName && <button onClick={login}>Login</button>}
       {loggedInUserName && <button onClick={logout}>Logout</button>}

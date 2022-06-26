@@ -1,5 +1,5 @@
 import actionsTypes from "./constants";
-const ALLOWED_PASSWORD = "123";
+const ALLOWED_PASSWORD = "1234";
 
 const logIn = user => ({
   type: actionsTypes.LOG_IN,
