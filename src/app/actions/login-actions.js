@@ -6,7 +6,9 @@ const logIn = user => ({
   user
 });
 
-// TODO create logout action
+const logOut = () => ({
+  type: actionsTypes.LOG_OUT
+});
 
 const badUser = () => ({
   type: actionsTypes.BAD_USER
@@ -18,10 +20,14 @@ const badPassword = () => ({
 
 export const logInAction = (user, password) => {
   return dispatch => {
-    // TODO dispatch badUser() action if user is missing
-    // TODO dispatch badPassword() action if ALLOWED_PASSWORD !== password
-    // TODO dispatch logIn(user)
+    if (!user) dispatch(badUser());
+    else if (ALLOWED_PASSWORD !== password) dispatch(badPassword());
+    else dispatch(logIn(user));
   };
 };
 
-// TODO create logout action creator
+export const logOutAction = () => {
+  return dispatch => {
+    dispatch(logOut());
+  };
+};

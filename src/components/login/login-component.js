@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import "./login-component.css";
 
-function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction }) {
+function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction, logOutAction }) {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
 
@@ -21,8 +21,8 @@ function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction 
     logInAction(user, pass);
   }, [logInAction, user, pass]);
   const logout = useCallback(() => {
-    // TODO call logOutAction
-  }, []);
+    logOutAction();
+  }, [logOutAction]);
 
   return (
     <div className="login-component">
